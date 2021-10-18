@@ -9,17 +9,29 @@ public class Qns7 {
     }
 
     static void Answer(int n) {
-        for (int row = 0; row < n; row++) {
-            for (int col = 0; col < n; col++) {
-                if(col >= row){
-                    System.out.print("*");
-                }
-                else {
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
-        }
+       int nstar = n; //number of stars
+       int nspace = 0; //numbers of space 
+       
+        //this for loop for every rows
+       for(int i = 1; i <= n; i++)
+       {
+          //this for loop for every columns for the number of spaces
+          for(int j = 1; j <= nspace; j++)
+          {
+              System.out.print(" ");
+          }
+             
+          //this for loop for every column for the number of stars
+          for(int j = 1; j <= nstar; j++)
+          {
+              System.out.print("*");
+          }
+          
+          //Space increment and star decrement.
+          nspace++;
+          nstar--;
+          System.out.println();
+      }
     }
 }
 
